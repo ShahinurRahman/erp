@@ -1,0 +1,190 @@
+<script src="../resources/js/jquery.js"></script>
+<script src="../resources/js/bootstrap.min.js"></script>
+<link href="../resources/css/bootstrap.min.css" rel="stylesheet">
+<br/>
+<br/>
+<br/>
+
+<form name="dataForm" id="dataForm" action="saveBrtcProject.erp" method="POST">
+    <div class="col-lg-6 text-center">
+
+        <div class="col-lg-4 text-left">
+            Student:
+        </div>
+        <div class="col-lg-8 text-left">
+            <div class="form-group">
+                <div class="form-group has-success">
+                    <input type="text" name="fileNo" id="fileNo" class="form-control has-success"
+                           onkeydown="clearErrMsg()">
+                    <label id="fileNoErrMsg" style="color: red" class="errMsgLabel"></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 text-left">
+            Written:
+        </div>
+        <div class="col-lg-8 text-left">
+            <div class="form-group">
+                <div class="form-group has-success">
+                    <input type="text" name="fileNo" id="fileNo" class="form-control has-success"
+                           onkeydown="clearErrMsg()">
+                    <label id="fileNoErrMsg" style="color: red" class="errMsgLabel"></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 text-left">
+            MCQ:
+        </div>
+        <div class="col-lg-8 text-left">
+            <div class="form-group">
+                <div class="form-group has-success">
+                    <input type="text" name="fileNo" id="fileNo" class="form-control has-success"
+                           onkeydown="clearErrMsg()">
+                    <label id="fileNoErrMsg" style="color: red" class="errMsgLabel"></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 text-left">
+            Tutorial:
+        </div>
+        <div class="col-lg-8 text-left">
+            <div class="form-group">
+                <div class="form-group has-success">
+                    <input type="text" name="fileNo" id="fileNo" class="form-control has-success"
+                           onkeydown="clearErrMsg()">
+                    <label id="fileNoErrMsg" style="color: red" class="errMsgLabel"></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 text-left">
+            Class Test:
+        </div>
+        <div class="col-lg-8 text-left">
+            <div class="form-group">
+                <div class="form-group has-success">
+                    <input type="text" name="fileNo" id="fileNo" class="form-control has-success"
+                           onkeydown="clearErrMsg()">
+                    <label id="fileNoErrMsg" style="color: red" class="errMsgLabel"></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 text-left">
+            Quiz Test:
+        </div>
+        <div class="col-lg-8 text-left">
+            <div class="form-group">
+                <div class="form-group has-success">
+                    <input type="text" name="fileNo" id="fileNo" class="form-control has-success"
+                           onkeydown="clearErrMsg()">
+                    <label id="fileNoErrMsg" style="color: red" class="errMsgLabel"></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 text-left">
+            Practical:
+        </div>
+        <div class="col-lg-8 text-left">
+            <div class="form-group">
+                <div class="form-group has-success">
+                    <input type="text" name="fileNo" id="fileNo" class="form-control has-success"
+                           onkeydown="clearErrMsg()">
+                    <label id="fileNoErrMsg" style="color: red" class="errMsgLabel"></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 text-left">
+            Weekly Test:
+        </div>
+        <div class="col-lg-8 text-left">
+            <div class="form-group">
+                <div class="form-group has-success">
+                    <input type="text" name="fileNo" id="fileNo" class="form-control has-success"
+                           onkeydown="clearErrMsg()">
+                    <label id="fileNoErrMsg" style="color: red" class="errMsgLabel"></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 text-left">
+            Monthly Test:
+        </div>
+        <div class="col-lg-8 text-left">
+            <div class="form-group">
+                <div class="form-group has-success">
+                    <input type="text" name="fileNo" id="fileNo" class="form-control has-success"
+                           onkeydown="clearErrMsg()">
+                    <label id="fileNoErrMsg" style="color: red" class="errMsgLabel"></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 text-left">
+            Others:
+        </div>
+        <div class="col-lg-8 text-left">
+            <div class="form-group">
+                <div class="form-group has-success">
+                    <input type="text" name="fileNo" id="fileNo" class="form-control has-success"
+                           onkeydown="clearErrMsg()">
+                    <label id="fileNoErrMsg" style="color: red" class="errMsgLabel"></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 text-left">
+            Mark Sheet:
+        </div>
+        <div class="col-lg-8 text-center">
+            <div class="form-group">
+                <select class="form-control  has-success" name="clientId" id="clientId">
+                    <option value="null">--Select--</option>
+                    <#if clientList??>
+                        <#list clientList as client>
+                            <option value="${client.id}">${city.name}</option>
+                        </#list>
+                    </#if>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 text-left">
+        </div>
+        <div class="col-lg-8 text-right">
+            <button type="reset" class="btn btn-primary">Reset</button>
+            <button type="button" id="examSave" class="btn btn-success">Save</button>
+        </div>
+    </div>
+</form>
+
+<script type="text/javascript">
+    $('#examSave').click(function () {
+        var fileNo = $('#fileNo');
+        var projectTitle = $('#projectTitle');
+        if (fileNo.val() === "") {
+            $('#fileNoErrMsg').html("File No can't be empty");
+            fileNo.focus();
+            return false;
+        }
+        if (projectTitle.val() === "") {
+            $('#projectTitleErrMsg').html("File No can't be empty");
+            projectTitle.focus();
+            return false;
+        }
+
+        alert("Saved Successfully")
+
+
+    });
+
+    function clearErrMsg() {
+        $('.errMsgLabel').html("");
+    }
+</script>

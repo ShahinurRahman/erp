@@ -1,0 +1,6 @@
+//Edit and Delete Button
+<td class="text-center">
+    <a href="deleteUserDetails.erp?id=${userDetails.id}" title="Delete" class="fa fa-times fa-lg text-pad-t-3"></a>
+    &nbsp;&nbsp;
+    <a href="editUserDetails.erp?id=${userDetails.id}" title="Edit" class="fa fa-pencil fa-lg text-pad-t-3"></a>
+</td>
